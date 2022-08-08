@@ -2,6 +2,9 @@
 """test casses for the unittests"""
 
 import unittest
-class BaseModel(unittest.TestCase):
-    def test_base():
-        pass
+from models.base_model import BaseModel
+class TestBaseModel(unittest.TestCase):
+    """tests if object is part of BaseModel""" 
+    def test_base_init(self):
+      base_class= BaseModel()
+      self.assertIsInstance(base_class, BaseModel)
